@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import { MuiThemeProvider } from '@material-ui/core';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { HTTP } from '@metall/common1';
+import { LayoutMain } from './components/layouts/layout-main/LayoutMain';
+import { theme, variables } from './config/theme/Theme.v1';
+import { ChatPage } from './components/pages/chat-page/ChatPage';
+// import { installHttpMock } from './__mock/installHttpMock';
 
 function App() {
+  HTTP.createClient('/api');
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false
+      }
+    }
+  });
+
+  // installHttpMock();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={{ ...theme, ...variables }}>
+      <QueryClientProvider client={queryClient}>
+        <div className="App">
+          <LayoutMain>
+            <Router>
+              <Switch>
+                <Route path="/messenger">
+                  <ChatPage />
+                </Route>
+              </Switch>
+            </Router>
+          </LayoutMain>
+        </div>
+      </QueryClientProvider>
+    </MuiThemeProvider>
   );
 }
 
