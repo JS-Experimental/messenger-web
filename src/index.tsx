@@ -1,7 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import firebase from 'firebase/app';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyBjDQ6fFDprSDmcjLtfd1Bl1s3H8oD5B80',
+  authDomain: 'messenger-web-325c4.firebaseapp.com',
+  projectId: 'messenger-web-325c4',
+  storageBucket: 'messenger-web-325c4.appspot.com',
+  messagingSenderId: '625036047895',
+  appId: '1:625036047895:web:b8c6be1f83508148950e52',
+  measurementId: 'G-FG6TC7E0QV'
+};
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,9 +1,10 @@
+import React from 'react';
 import {
   Box, Grid, makeStyles, Paper, Typography
 } from '@material-ui/core';
 
 export interface MessageElementProps {
-  id:string;
+  id: string;
   sender: 'me' | 'others',
   senderImage: string;
   messageText: string;
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const MessageElement: React.FC<MessageElementProps> = ({
-  sender, senderImage, messageText, ...props
+  id, sender, senderImage, messageText, ...props
 }) => {
   const style = useStyles({ sender });
   const direction = sender === 'me' ? 'row-reverse' : 'row';

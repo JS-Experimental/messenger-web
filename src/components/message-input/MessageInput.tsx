@@ -1,15 +1,15 @@
+import React from 'react';
 import {
   IconButton, makeStyles, TextField, useTheme
 } from '@material-ui/core';
-import { IoIosSend } from 'react-icons/all';
-import React from 'react';
+import { IoIosSend } from 'react-icons/io';
 import { AppTheme } from '../../config/theme/Theme.v1';
 
 export type OnChangeMessageInput = (e: React.ChangeEvent<HTMLInputElement>) => void;
 
 export interface MessageInputProps {
-    onChange: OnChangeMessageInput;
-    onEnter: () => void;
+    onChange?: OnChangeMessageInput;
+    onEnter?: () => void;
 }
 
 const useStyles = makeStyles((theme: AppTheme) => ({

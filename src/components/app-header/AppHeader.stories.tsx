@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import { AppHeader, AppHeaderProps } from './AppHeader';
 
 export default {
@@ -9,4 +9,6 @@ export default {
 const Template: Story<AppHeaderProps> = (args) => <AppHeader {...args} />;
 
 export const Main = Template.bind({});
-Main.args = {};
+Main.args = {
+  onClickMenu: jest.fn
+} as AppHeaderProps;

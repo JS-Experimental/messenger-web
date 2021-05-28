@@ -12,7 +12,8 @@ import { ChatPage } from './components/pages/chat-page/ChatPage';
 // import { installHttpMock } from './__mock/installHttpMock';
 
 function App() {
-  HTTP.createClient('/api');
+  // HTTP.createClient('/api');
+  HTTP.createClient('https://messenger-web-api.herokuapp.com/api');
 
   const queryClient = new QueryClient({
     defaultOptions: {

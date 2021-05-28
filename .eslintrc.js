@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  extends: ['react-app', 'airbnb'],
+  extends: ['react-app', 'react-app/jest', 'airbnb'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -43,12 +43,7 @@ module.exports = {
     'import/extensions': 0,
     'react/jsx-props-no-spreading': 'off',
     'no-undef': 'off',
-    'import/no-extraneous-dependencies': ['error', {
-      devDependencies: true,
-      optionalDependencies: false,
-      peerDependencies: false,
-      packageDir: path.join(__dirname, './')
-    }],
+    'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'no-use-before-define': 'off'
   },

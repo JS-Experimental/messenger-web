@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import { ChatPage, ChatPageProps } from './ChatPage';
 
 export default {

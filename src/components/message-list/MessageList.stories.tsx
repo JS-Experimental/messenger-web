@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import { MessageList, MessageListProps } from './MessageList';
 import { BigText, MyMessage, OthersMessage } from '../message-element/MessageElement.stories';
 import { MessageElement } from '../message-element/MessageElement';

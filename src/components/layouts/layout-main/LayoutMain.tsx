@@ -1,9 +1,11 @@
+import React from 'react';
+
 import { Container, makeStyles } from '@material-ui/core';
 import { AppHeader } from '../../app-header/AppHeader';
 import { AppTheme } from '../../../config/theme/Theme.v1';
 
 export interface LayoutMainProps {
-    children: JSX.Element
+    children?: React.ReactNode
 }
 
 const useStyles = makeStyles((theme: AppTheme) => ({

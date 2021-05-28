@@ -15,8 +15,6 @@ export default function MessageInputContainer() {
     setMessage(e.currentTarget.value);
   };
 
-  console.log(sendMessage.isLoading, sendMessage.error);
-
   return (
     <MessageInput onChange={onChangeMessage} onEnter={onSubmitMessage} />
   );
