@@ -9,6 +9,4 @@ export default {
 const Template: Story<AppHeaderProps> = (args) => <AppHeader {...args} />;
 
 export const Main = Template.bind({});
-Main.args = {
-  onClickMenu: jest.fn
-} as AppHeaderProps;
+Main.args = {};

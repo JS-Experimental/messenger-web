@@ -1,8 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { MyMessage } from './MessageElement.stories';
+import { BigText, MyMessage, OthersMessage } from './MessageElement.stories';
 
-it('renders the button in the primary state', async () => {
+it('renders MyMessage story', async () => {
   render(<MyMessage {...MyMessage.args} />);
+  expect(screen.getAllByAltText('User who send this message')).toHaveLength(1);
+});
+
+it('renders BigText story', async () => {
+  render(<BigText {...BigText.args} />);
+  expect(screen.getAllByAltText('User who send this message')).toHaveLength(1);
+});
+
+it('renders OthersMessage story', async () => {
+  render(<OthersMessage {...OthersMessage.args} />);
   expect(screen.getAllByAltText('User who send this message')).toHaveLength(1);
 });
