@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   extends: ['react-app', 'react-app/jest', 'airbnb'],
   parserOptions: {
