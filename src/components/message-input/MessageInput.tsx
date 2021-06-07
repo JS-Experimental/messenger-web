@@ -29,7 +29,7 @@ export const MessageInput: React.FC<MessageInputProps> = ({ onChange, onEnter })
     <form noValidate autoComplete="off">
       <TextField
         id="standard-basic"
-        label="Input message"
+        label="Input message."
         fullWidth
         multiline
         variant="outlined"
