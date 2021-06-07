@@ -23,8 +23,8 @@ jobs:
         run: yarn build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
-          with:
-            repoToken: "${{ secrets.GITHUB_TOKEN }}"
-            firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MESSENGER_WEB_325C4 }}"
-            projectId: messenger-web-325c4
-            channelId: live
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MESSENGER_WEB_325C4 }}"
+          projectId: messenger-web-325c4
+          channelId: live
