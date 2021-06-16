@@ -5,7 +5,8 @@
   
 
 ### `git clone [repository url]`
-- <b>Install DEV branch on your local machine
+- <b>Clone repository locally
+- Create branch for each issue from DEV branch
 
 <br>
 
