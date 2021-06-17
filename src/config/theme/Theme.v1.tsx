@@ -1,4 +1,4 @@
-import { createMuiTheme, Theme } from '@material-ui/core';
+import { unstable_createMuiStrictModeTheme as createMuiTheme, Theme } from '@material-ui/core';
 
 export interface AppTheme extends Theme {
     size: {
