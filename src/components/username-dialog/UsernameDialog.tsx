@@ -5,21 +5,22 @@ import {
 
 export type OnChangeUsernameInput = (e: React.ChangeEvent<HTMLInputElement>) => void;
 
+const defaultOpen:boolean = false;
 export interface UsernameDialogProps{
-  open: boolean,
+  open: typeof defaultOpen | boolean,
   handleClose(): any,
   onChange: OnChangeUsernameInput
 }
 
 export const UsernameDialog: React.FC<UsernameDialogProps> = ({
-  open, handleClose, onChange
+  open = defaultOpen, handleClose, onChange
 }) => (
   <Grid>
     <Dialog
       open={open}
       onClose={handleClose}
     >
-      <DialogTitle>Messenger</DialogTitle>
+      <DialogTitle>Chat</DialogTitle>
       <DialogContent>
         <DialogContentText>
           Enter your name to start chatting with friends.
@@ -31,6 +32,7 @@ export const UsernameDialog: React.FC<UsernameDialogProps> = ({
           type="email"
           onChange={onChange}
           fullWidth
+          id="dialog-username"
         />
       </DialogContent>
       <DialogActions>
