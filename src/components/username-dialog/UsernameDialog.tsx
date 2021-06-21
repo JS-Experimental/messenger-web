@@ -8,12 +8,11 @@ export type OnChangeUsernameInput = (e: React.ChangeEvent<HTMLInputElement>) => 
 const defaultOpen:boolean = false;
 export interface UsernameDialogProps{
   open: typeof defaultOpen | boolean,
-  handleClose(): any,
-  onChange: OnChangeUsernameInput
+  handleClose: () => void
 }
 
 export const UsernameDialog: React.FC<UsernameDialogProps> = ({
-  open = defaultOpen, handleClose, onChange
+  open = defaultOpen, handleClose
 }) => (
   <Grid>
     <Dialog
@@ -30,7 +29,6 @@ export const UsernameDialog: React.FC<UsernameDialogProps> = ({
           margin="dense"
           label="Username"
           type="email"
-          onChange={onChange}
           fullWidth
           id="dialog-username"
         />

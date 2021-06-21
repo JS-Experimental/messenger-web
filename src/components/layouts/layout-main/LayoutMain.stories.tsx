@@ -1,19 +1,19 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { LayoutMain, LayoutMainProps } from './LayoutMain';
-import { ChatPage } from '../../pages/chat-page/ChatPage';
+import { MainPage } from '../../pages/main-page/MainPage';
 
 export default {
-  title: 'Screens/Messenger',
+  title: 'Screens/Main',
   component: LayoutMain
 } as Meta;
 
 const Template: Story<LayoutMainProps> = ((args) => <LayoutMain {...args} />);
 
-export const ChatScreen = Template.bind({});
-ChatScreen.args = {
+export const MainScreen = Template.bind({});
+MainScreen.args = {
   children: (
     <>
-      <ChatPage />
+      <MainPage />
     </>
   )
 };

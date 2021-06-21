@@ -1,13 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { ComponentWithMuiAndReactQuery } from '../../../config/testSetups';
-import { MainScreen } from './LayoutMain.stories';
+import { ChatScreen } from './LayoutMessenger.stories';
 
-it('renders Main layout', async () => {
+it('renders Messenger layout', async () => {
   render(
     <ComponentWithMuiAndReactQuery>
-      <MainScreen {...MainScreen.args} />
+      <ChatScreen {...ChatScreen.args} />
     </ComponentWithMuiAndReactQuery>
   );
   expect(screen.getByText('Messenger')).toBeInTheDocument();
-  expect(screen.getByText('START CHAT')).toBeInTheDocument();
 });
